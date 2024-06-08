@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+    --of-white :hsl(36, 100%, 99%);
+    --grayish-blue :hsl(233, 8%, 79%);
+    --dark-grayish-blue:hsl(236, 13%, 42%);
+    --vary-dark-blue:hsl(240, 100%, 5%);
+    --soft-orange:hsl(35, 77%, 62%);
+    --soft-red:hsl(5, 85%, 63%);
+}
+
+body {
+    font-family: "Inter" , sans-serif;
+    font-size: 15px;
+    background-color:var(--of-white) ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.container {
+    margin: 0 10px;
+}
+
+/* nav styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    width: 50px;
+}
+
+.navbar .menu-icon {
+    width: 30px;
+    height: 25px;
+}
+
+header {
+    margin: 30px 0;
+}
+
+.description h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color:hsl(240, 100%, 5%) ;
+}
+
+.description p {
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+    margin:10px 0 ;
+    line-height: 1.3;
+}
+
+.description button {
+    padding:10px 20px;
+    margin: 20px 0;
+    background-color: var(--soft-red);
+    columns: var(--vary-dark-blue);
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border-radius: 5px;
+}
+
+.description button:hover {
+    background-color: var(--vary-dark-blue);
+    color: var(--of-white);
+}
+
+.info {
+    padding: 30px;
+    background-color: var(--vary-dark-blue);
+    color: var(--of-white);
+    margin: 40px 0;
+}
+
+.info h3{
+    color: var(--soft-orange);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.info h4{
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: var(--of-white);
+    font-weight: 600;
+}
+
+.info hr {
+    margin: 30px 0;
+    border-color: var(--grayish-blue);
+}
+
+.info p {
+    color: var(--grayish-blue);
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.features-wrapper {
+    margin-bottom: 50px;
+}
+
+.featuresItems {
+    margin: 20px 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.featuresItems img {
+    width: 100px;
+}
+
+.features-description h2{
+    font-size: 2rem;
+    color: var(--soft-red);
+    margin: 10px 0;
+}
+
+.features-description h3 {
+    color: var(--vary-dark-blue);
+    margin: 10px 0;
+}
+
+.features-description p {
+    color: var(--dark-grayish-blue);
+    font-weight: 300;
+}
