@@ -12,6 +12,7 @@ body {
     font-family: "Inter" , sans-serif;
     font-size: 15px;
     background-color:var(--of-white) ;
+    position: relative;
 }
 
 *{
@@ -34,7 +35,8 @@ img{
 
 .container {
     margin: 0 10px;
-}
+    
+}   
 
 /* nav styles */
 
@@ -47,11 +49,92 @@ img{
 .navbar img {
     width: 50px;
 }
+#close-icon{
+    display: none;
+}
 
+
+
+@media(max-width:500px){
+    .navlist-container {
+        
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width:70%;
+        background-color: var(--of-white);
+        height: 100vh;
+        padding-top: 100px;
+        transition: 0.5s;
+        display: none;
+        
+    }
+    .navlist-container li {
+        list-style-type: none;
+        margin: 20px 10px;
+        padding: 10px;
+    }
+    .navlist-container li a {
+        text-decoration: none;
+        color: var(--dark-grayish-blue);
+    }
+    .navlist-container li:hover {
+        background-color: lightgray;
+    }
+    #close-icon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right:20px;
+        width: 24px;
+    }
+    .desktop-bg {
+        display: none;
+    }
+}
+
+.show-menu-bar {
+    display:block;
+    transition: 0.5s;
+}
+
+@media(min-width:501px) {
+    .navlist-container {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    .navlist-container li:hover a{
+        color: var(--soft-orange);
+    }
+    .menu-icon {
+        display: none;
+    }
+    .container {
+        max-width: 70%;
+        margin-inline: auto;
+    }
+    .desktop-bg{
+        display: block;
+    }
+    .mobile-bg{
+        display: none;
+    }
+    .hide-menu-bar {
+        display: block;
+    }
+}
 .navbar .menu-icon {
     width: 30px;
     height: 25px;
 }
+
+.navlist-container li a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+
 
 header {
     margin: 30px 0;
@@ -150,4 +233,47 @@ header {
 .features-description p {
     color: var(--dark-grayish-blue);
     font-weight: 300;
+}
+
+
+/* responsive layout designs */
+
+@media(min-width:800px){
+    .main-section {
+        display: flex;
+        gap: 1rem;
+    }
+    .info{
+        margin: 0;
+    }
+    .description{
+        margin-top: 40px;
+        display: flex;
+        gap: 6rem;
+    }
+    .wrapper p{
+        width: 90%;
+        line-height: 1.5rem;
+    }
+
+    .wrapper button{
+        margin-top: 20px;
+    }
+
+    .features-wrapper{
+        display: flex;
+        gap: 3rem;
+    }
+
+    .features-wrapper > * {
+        flex-basis:30%;
+    }
+
+    .features-description h3:hover{
+        color: var(--soft-red);
+    }
+}
+
+.features-wrapper {
+    flex-wrap: wrap;
 }
